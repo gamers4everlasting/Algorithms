@@ -1,0 +1,320 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\muhta\RiderProjects\InsertionSort\bin\Release\net5.0\281a7b1e-5967-4591-ba8e-9a54515c1d53
+// command took 3,13s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\muhta\RiderProjects\InsertionSort\bin\Release\net5.0\281a7b1e-5967-4591-ba8e-9a54515c1d53
+// command took 5,28s and exited with 0
+// ***** Done, took 00:00:09 (9.39 sec)   *****
+// Found 3 benchmarks:
+//   InsertionSortBenchmark.SortWithTenT: DefaultJob
+//   InsertionSortBenchmark.SortWithHunT: DefaultJob
+//   InsertionSortBenchmark.SortWithOneM: DefaultJob
+
+// **************************
+// Benchmark: InsertionSortBenchmark.SortWithTenT: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "281a7b1e-5967-4591-ba8e-9a54515c1d53.dll" --benchmarkName "InsertionSort.InsertionSortBenchmark.SortWithTenT" --job "Default" --benchmarkId 0 in C:\Users\muhta\RiderProjects\InsertionSort\bin\Release\net5.0\281a7b1e-5967-4591-ba8e-9a54515c1d53\bin\Release\netcoreapp5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 306100.00 ns, 306.1000 us/op
+WorkloadJitting  1: 1 op, 59851300.00 ns, 59.8513 ms/op
+
+WorkloadPilot    1: 2 op, 117018000.00 ns, 58.5090 ms/op
+WorkloadPilot    2: 3 op, 170719300.00 ns, 56.9064 ms/op
+WorkloadPilot    3: 4 op, 230790500.00 ns, 57.6976 ms/op
+WorkloadPilot    4: 5 op, 289499600.00 ns, 57.8999 ms/op
+WorkloadPilot    5: 6 op, 345804700.00 ns, 57.6341 ms/op
+WorkloadPilot    6: 7 op, 396217200.00 ns, 56.6025 ms/op
+WorkloadPilot    7: 8 op, 461196700.00 ns, 57.6496 ms/op
+WorkloadPilot    8: 9 op, 514851400.00 ns, 57.2057 ms/op
+
+WorkloadWarmup   1: 9 op, 509429000.00 ns, 56.6032 ms/op
+WorkloadWarmup   2: 9 op, 509874700.00 ns, 56.6527 ms/op
+WorkloadWarmup   3: 9 op, 511786700.00 ns, 56.8652 ms/op
+WorkloadWarmup   4: 9 op, 529755700.00 ns, 58.8617 ms/op
+WorkloadWarmup   5: 9 op, 511738100.00 ns, 56.8598 ms/op
+WorkloadWarmup   6: 9 op, 511485700.00 ns, 56.8317 ms/op
+WorkloadWarmup   7: 9 op, 509731200.00 ns, 56.6368 ms/op
+WorkloadWarmup   8: 9 op, 509561500.00 ns, 56.6179 ms/op
+WorkloadWarmup   9: 9 op, 515224900.00 ns, 57.2472 ms/op
+WorkloadWarmup  10: 9 op, 509434000.00 ns, 56.6038 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 9 op, 511541800.00 ns, 56.8380 ms/op
+WorkloadActual   2: 9 op, 510750700.00 ns, 56.7501 ms/op
+WorkloadActual   3: 9 op, 518879700.00 ns, 57.6533 ms/op
+WorkloadActual   4: 9 op, 510068600.00 ns, 56.6743 ms/op
+WorkloadActual   5: 9 op, 513205100.00 ns, 57.0228 ms/op
+WorkloadActual   6: 9 op, 522627100.00 ns, 58.0697 ms/op
+WorkloadActual   7: 9 op, 528530500.00 ns, 58.7256 ms/op
+WorkloadActual   8: 9 op, 530252200.00 ns, 58.9169 ms/op
+WorkloadActual   9: 9 op, 547014000.00 ns, 60.7793 ms/op
+WorkloadActual  10: 9 op, 537307000.00 ns, 59.7008 ms/op
+WorkloadActual  11: 9 op, 528917900.00 ns, 58.7687 ms/op
+WorkloadActual  12: 9 op, 529229300.00 ns, 58.8033 ms/op
+WorkloadActual  13: 9 op, 527774000.00 ns, 58.6416 ms/op
+WorkloadActual  14: 9 op, 533684800.00 ns, 59.2983 ms/op
+WorkloadActual  15: 9 op, 533673900.00 ns, 59.2971 ms/op
+WorkloadActual  16: 9 op, 538255700.00 ns, 59.8062 ms/op
+WorkloadActual  17: 9 op, 514485500.00 ns, 57.1651 ms/op
+WorkloadActual  18: 9 op, 513153000.00 ns, 57.0170 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 9 op, 511541800.00 ns, 56.8380 ms/op
+WorkloadResult   2: 9 op, 510750700.00 ns, 56.7501 ms/op
+WorkloadResult   3: 9 op, 518879700.00 ns, 57.6533 ms/op
+WorkloadResult   4: 9 op, 510068600.00 ns, 56.6743 ms/op
+WorkloadResult   5: 9 op, 513205100.00 ns, 57.0228 ms/op
+WorkloadResult   6: 9 op, 522627100.00 ns, 58.0697 ms/op
+WorkloadResult   7: 9 op, 528530500.00 ns, 58.7256 ms/op
+WorkloadResult   8: 9 op, 530252200.00 ns, 58.9169 ms/op
+WorkloadResult   9: 9 op, 547014000.00 ns, 60.7793 ms/op
+WorkloadResult  10: 9 op, 537307000.00 ns, 59.7008 ms/op
+WorkloadResult  11: 9 op, 528917900.00 ns, 58.7687 ms/op
+WorkloadResult  12: 9 op, 529229300.00 ns, 58.8033 ms/op
+WorkloadResult  13: 9 op, 527774000.00 ns, 58.6416 ms/op
+WorkloadResult  14: 9 op, 533684800.00 ns, 59.2983 ms/op
+WorkloadResult  15: 9 op, 533673900.00 ns, 59.2971 ms/op
+WorkloadResult  16: 9 op, 538255700.00 ns, 59.8062 ms/op
+WorkloadResult  17: 9 op, 514485500.00 ns, 57.1651 ms/op
+WorkloadResult  18: 9 op, 513153000.00 ns, 57.0170 ms/op
+GC:  0 0 0 363080 9
+Threading:  2 0 9
+
+// AfterAll
+// Benchmark Process 1124 has exited with code 0
+
+Mean = 58.329 ms, StdErr = 0.290 ms (0.50%), N = 18, StdDev = 1.230 ms
+Min = 56.674 ms, Q1 = 57.058 ms, Median = 58.684 ms, Q3 = 59.202 ms, Max = 60.779 ms
+IQR = 2.144 ms, LowerFence = 53.843 ms, UpperFence = 62.418 ms
+ConfidenceInterval = [57.180 ms; 59.479 ms] (CI 99.9%), Margin = 1.150 ms (1.97% of Mean)
+Skewness = 0.14, Kurtosis = 1.77, MValue = 2
+
+// **************************
+// Benchmark: InsertionSortBenchmark.SortWithHunT: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "281a7b1e-5967-4591-ba8e-9a54515c1d53.dll" --benchmarkName "InsertionSort.InsertionSortBenchmark.SortWithHunT" --job "Default" --benchmarkId 1 in C:\Users\muhta\RiderProjects\InsertionSort\bin\Release\net5.0\281a7b1e-5967-4591-ba8e-9a54515c1d53\bin\Release\netcoreapp5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 302200.00 ns, 302.2000 us/op
+WorkloadJitting  1: 1 op, 5755000900.00 ns, 5.7550 s/op
+
+WorkloadWarmup   1: 1 op, 5745075200.00 ns, 5.7451 s/op
+WorkloadWarmup   2: 1 op, 5699241300.00 ns, 5.6992 s/op
+WorkloadWarmup   3: 1 op, 5660228500.00 ns, 5.6602 s/op
+WorkloadWarmup   4: 1 op, 5666470700.00 ns, 5.6665 s/op
+WorkloadWarmup   5: 1 op, 5636372500.00 ns, 5.6364 s/op
+WorkloadWarmup   6: 1 op, 5762627500.00 ns, 5.7626 s/op
+WorkloadWarmup   7: 1 op, 5870452700.00 ns, 5.8705 s/op
+WorkloadWarmup   8: 1 op, 5837267200.00 ns, 5.8373 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 5745521700.00 ns, 5.7455 s/op
+WorkloadActual   2: 1 op, 5708213300.00 ns, 5.7082 s/op
+WorkloadActual   3: 1 op, 5589415600.00 ns, 5.5894 s/op
+WorkloadActual   4: 1 op, 5587856300.00 ns, 5.5879 s/op
+WorkloadActual   5: 1 op, 5597664100.00 ns, 5.5977 s/op
+WorkloadActual   6: 1 op, 5591183900.00 ns, 5.5912 s/op
+WorkloadActual   7: 1 op, 5569943100.00 ns, 5.5699 s/op
+WorkloadActual   8: 1 op, 5523895900.00 ns, 5.5239 s/op
+WorkloadActual   9: 1 op, 5521603500.00 ns, 5.5216 s/op
+WorkloadActual  10: 1 op, 5498795200.00 ns, 5.4988 s/op
+WorkloadActual  11: 1 op, 5498478500.00 ns, 5.4985 s/op
+WorkloadActual  12: 1 op, 5517785100.00 ns, 5.5178 s/op
+WorkloadActual  13: 1 op, 5546698200.00 ns, 5.5467 s/op
+WorkloadActual  14: 1 op, 5535383800.00 ns, 5.5354 s/op
+WorkloadActual  15: 1 op, 5502082800.00 ns, 5.5021 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 5589415600.00 ns, 5.5894 s/op
+WorkloadResult   2: 1 op, 5587856300.00 ns, 5.5879 s/op
+WorkloadResult   3: 1 op, 5597664100.00 ns, 5.5977 s/op
+WorkloadResult   4: 1 op, 5591183900.00 ns, 5.5912 s/op
+WorkloadResult   5: 1 op, 5569943100.00 ns, 5.5699 s/op
+WorkloadResult   6: 1 op, 5523895900.00 ns, 5.5239 s/op
+WorkloadResult   7: 1 op, 5521603500.00 ns, 5.5216 s/op
+WorkloadResult   8: 1 op, 5498795200.00 ns, 5.4988 s/op
+WorkloadResult   9: 1 op, 5498478500.00 ns, 5.4985 s/op
+WorkloadResult  10: 1 op, 5517785100.00 ns, 5.5178 s/op
+WorkloadResult  11: 1 op, 5546698200.00 ns, 5.5467 s/op
+WorkloadResult  12: 1 op, 5535383800.00 ns, 5.5354 s/op
+WorkloadResult  13: 1 op, 5502082800.00 ns, 5.5021 s/op
+GC:  0 0 0 400336 1
+Threading:  2 0 1
+
+// AfterAll
+// Benchmark Process 8944 has exited with code 0
+
+Mean = 5.545 s, StdErr = 0.011 s (0.19%), N = 13, StdDev = 0.038 s
+Min = 5.498 s, Q1 = 5.518 s, Median = 5.535 s, Q3 = 5.588 s, Max = 5.598 s
+IQR = 0.070 s, LowerFence = 5.413 s, UpperFence = 5.693 s
+ConfidenceInterval = [5.499 s; 5.590 s] (CI 99.9%), Margin = 0.045 s (0.82% of Mean)
+Skewness = 0.17, Kurtosis = 1.25, MValue = 2
+
+// **************************
+// Benchmark: InsertionSortBenchmark.SortWithOneM: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "281a7b1e-5967-4591-ba8e-9a54515c1d53.dll" --benchmarkName "InsertionSort.InsertionSortBenchmark.SortWithOneM" --job "Default" --benchmarkId 2 in C:\Users\muhta\RiderProjects\InsertionSort\bin\Release\net5.0\281a7b1e-5967-4591-ba8e-9a54515c1d53\bin\Release\netcoreapp5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 287900.00 ns, 287.9000 us/op
+WorkloadJitting  1: 1 op, 550937055800.00 ns, 550.9371 s/op
+
+WorkloadWarmup   1: 1 op, 552378693400.00 ns, 552.3787 s/op
+WorkloadWarmup   2: 1 op, 550710933900.00 ns, 550.7109 s/op
+WorkloadWarmup   3: 1 op, 550218716900.00 ns, 550.2187 s/op
+WorkloadWarmup   4: 1 op, 550105262800.00 ns, 550.1053 s/op
+WorkloadWarmup   5: 1 op, 2537672591400.00 ns, 42.2945 m/op
+WorkloadWarmup   6: 1 op, 576310836100.00 ns, 576.3108 s/op
+WorkloadWarmup   7: 1 op, 574380204900.00 ns, 574.3802 s/op
+WorkloadWarmup   8: 1 op, 573753531500.00 ns, 573.7535 s/op
+WorkloadWarmup   9: 1 op, 589431943500.00 ns, 589.4319 s/op
+WorkloadWarmup  10: 1 op, 553019108100.00 ns, 553.0191 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 552647416200.00 ns, 552.6474 s/op
+WorkloadActual   2: 1 op, 550165062500.00 ns, 550.1651 s/op
+WorkloadActual   3: 1 op, 552244245400.00 ns, 552.2442 s/op
+WorkloadActual   4: 1 op, 552320751300.00 ns, 552.3208 s/op
+WorkloadActual   5: 1 op, 551377303500.00 ns, 551.3773 s/op
+WorkloadActual   6: 1 op, 551046258700.00 ns, 551.0463 s/op
+WorkloadActual   7: 1 op, 1285162223600.00 ns, 21.4194 m/op
+WorkloadActual   8: 1 op, 553739650900.00 ns, 553.7397 s/op
+WorkloadActual   9: 1 op, 553609779100.00 ns, 553.6098 s/op
+WorkloadActual  10: 1 op, 553483846000.00 ns, 553.4838 s/op
+WorkloadActual  11: 1 op, 550231535400.00 ns, 550.2315 s/op
+WorkloadActual  12: 1 op, 550677221900.00 ns, 550.6772 s/op
+WorkloadActual  13: 1 op, 553420620300.00 ns, 553.4206 s/op
+WorkloadActual  14: 1 op, 551292097100.00 ns, 551.2921 s/op
+WorkloadActual  15: 1 op, 553197805400.00 ns, 553.1978 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 552647416200.00 ns, 552.6474 s/op
+WorkloadResult   2: 1 op, 550165062500.00 ns, 550.1651 s/op
+WorkloadResult   3: 1 op, 552244245400.00 ns, 552.2442 s/op
+WorkloadResult   4: 1 op, 552320751300.00 ns, 552.3208 s/op
+WorkloadResult   5: 1 op, 551377303500.00 ns, 551.3773 s/op
+WorkloadResult   6: 1 op, 551046258700.00 ns, 551.0463 s/op
+WorkloadResult   7: 1 op, 553739650900.00 ns, 553.7397 s/op
+WorkloadResult   8: 1 op, 553609779100.00 ns, 553.6098 s/op
+WorkloadResult   9: 1 op, 553483846000.00 ns, 553.4838 s/op
+WorkloadResult  10: 1 op, 550231535400.00 ns, 550.2315 s/op
+WorkloadResult  11: 1 op, 550677221900.00 ns, 550.6772 s/op
+WorkloadResult  12: 1 op, 553420620300.00 ns, 553.4206 s/op
+WorkloadResult  13: 1 op, 551292097100.00 ns, 551.2921 s/op
+WorkloadResult  14: 1 op, 553197805400.00 ns, 553.1978 s/op
+GC:  0 0 0 4001952 1
+Threading:  2 0 1
+
+// AfterAll
+// Benchmark Process 10292 has exited with code 0
+
+Mean = 552.104 s, StdErr = 0.346 s (0.06%), N = 14, StdDev = 1.293 s
+Min = 550.165 s, Q1 = 551.108 s, Median = 552.282 s, Q3 = 553.365 s, Max = 553.740 s
+IQR = 2.257 s, LowerFence = 547.722 s, UpperFence = 556.751 s
+ConfidenceInterval = [550.645 s; 553.563 s] (CI 99.9%), Margin = 1.459 s (0.26% of Mean)
+Skewness = -0.15, Kurtosis = 1.35, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\InsertionSort.InsertionSortBenchmark-report.csv
+  BenchmarkDotNet.Artifacts\results\InsertionSort.InsertionSortBenchmark-report-github.md
+  BenchmarkDotNet.Artifacts\results\InsertionSort.InsertionSortBenchmark-report.html
+
+// * Detailed results *
+InsertionSortBenchmark.SortWithTenT: DefaultJob
+Runtime = .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 58.329 ms, StdErr = 0.290 ms (0.50%), N = 18, StdDev = 1.230 ms
+Min = 56.674 ms, Q1 = 57.058 ms, Median = 58.684 ms, Q3 = 59.202 ms, Max = 60.779 ms
+IQR = 2.144 ms, LowerFence = 53.843 ms, UpperFence = 62.418 ms
+ConfidenceInterval = [57.180 ms; 59.479 ms] (CI 99.9%), Margin = 1.150 ms (1.97% of Mean)
+Skewness = 0.14, Kurtosis = 1.77, MValue = 2
+-------------------- Histogram --------------------
+[56.548 ms ; 57.780 ms) | @@@@@@@
+[57.780 ms ; 59.840 ms) | @@@@@@@@@@
+[59.840 ms ; 61.395 ms) | @
+---------------------------------------------------
+
+InsertionSortBenchmark.SortWithHunT: DefaultJob
+Runtime = .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 5.545 s, StdErr = 0.011 s (0.19%), N = 13, StdDev = 0.038 s
+Min = 5.498 s, Q1 = 5.518 s, Median = 5.535 s, Q3 = 5.588 s, Max = 5.598 s
+IQR = 0.070 s, LowerFence = 5.413 s, UpperFence = 5.693 s
+ConfidenceInterval = [5.499 s; 5.590 s] (CI 99.9%), Margin = 0.045 s (0.82% of Mean)
+Skewness = 0.17, Kurtosis = 1.25, MValue = 2
+-------------------- Histogram --------------------
+[5.477 s ; 5.619 s) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+InsertionSortBenchmark.SortWithOneM: DefaultJob
+Runtime = .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 552.104 s, StdErr = 0.346 s (0.06%), N = 14, StdDev = 1.293 s
+Min = 550.165 s, Q1 = 551.108 s, Median = 552.282 s, Q3 = 553.365 s, Max = 553.740 s
+IQR = 2.257 s, LowerFence = 547.722 s, UpperFence = 556.751 s
+ConfidenceInterval = [550.645 s; 553.563 s] (CI 99.9%), Margin = 1.459 s (0.26% of Mean)
+Skewness = -0.15, Kurtosis = 1.35, MValue = 2
+-------------------- Histogram --------------------
+[549.461 s ; 554.444 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.18363.1316 (1909/November2018Update/19H2)
+Intel Core i5-3330 CPU 3.00GHz (Ivy Bridge), 1 CPU, 4 logical and 4 physical cores
+.NET Core SDK=5.0.102
+  [Host]     : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+  DefaultJob : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+
+
+|       Method |          Mean |        Error |       StdDev | Rank | Gen 0 | Gen 1 | Gen 2 |  Allocated |
+|------------- |--------------:|-------------:|-------------:|-----:|------:|------:|------:|-----------:|
+| SortWithTenT |      58.33 ms |     1.150 ms |     1.230 ms |    1 |     - |     - |     - |    39.4 KB |
+| SortWithHunT |   5,544.68 ms |    45.478 ms |    37.976 ms |    2 |     - |     - |     - |  390.95 KB |
+| SortWithOneM | 552,103.83 ms | 1,458.987 ms | 1,293.354 ms |    3 |     - |     - |     - | 3908.16 KB |
+
+// * Hints *
+Outliers
+  InsertionSortBenchmark.SortWithHunT: Default -> 2 outliers were removed (5.71 s, 5.75 s)
+  InsertionSortBenchmark.SortWithOneM: Default -> 1 outlier  was  removed (21.42 m)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Rank      : Relative position of current benchmark mean among all benchmarks (Arabic style)
+  Gen 0     : GC Generation 0 collects per 1000 operations
+  Gen 1     : GC Generation 1 collects per 1000 operations
+  Gen 2     : GC Generation 2 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 04:58:06 (17886.61 sec), executed benchmarks: 3
+
+Global total time: 04:58:16 (17896.01 sec), executed benchmarks: 3
+// * Artifacts cleanup *
