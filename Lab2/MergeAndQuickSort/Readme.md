@@ -1,4 +1,6 @@
-﻿## **Analysis of Quick Sort**
+﻿#Anlysis of QUICK and MERGE sort
+
+## **Analysis of Quick Sort**
 
 **Time**: T(n) = T(k) + T(n-k-1) + θ(n)\
 **Worst Case**: θ(n^2)\
