@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Running;
+using MergeSortVsQuickSort;
 
-namespace MergeSortVsQuickSort
+namespace MergeAndQuickSort
 {
     class Program
     {

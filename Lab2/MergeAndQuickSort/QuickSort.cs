@@ -1,7 +1,6 @@
-﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace MergeSortVsQuickSort
+namespace MergeAndQuickSort
 {
     public class QuickSort
     {
