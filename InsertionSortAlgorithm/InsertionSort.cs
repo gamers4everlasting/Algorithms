@@ -11,11 +11,6 @@ namespace InsertionSort
         {
             var data = FillWithRandomData(dataSize);
 
-            // Console.WriteLine("Data amount before sorting with insertion sort: ");
-            // PrintData(data);
-
-            //IntegrateInsertionSort(out data, dataSize);
-
             for (var j = 2; j < dataSize; j++)
             {
                 var key = data[j];
@@ -29,8 +24,6 @@ namespace InsertionSort
                 data[i + 1] = key;
             }
 
-            //Console.WriteLine("Data amount after sorting with insertion sort: ");
-            // PrintData(data);
             return data;
         }
 
