@@ -7,11 +7,12 @@ namespace MergeAndQuickSort
     {
         public int[] Execute(int[] data)
         {  
+            Console.WriteLine($"Executing Merge sort with {data.Length} data size");
             var result =  Sort(data);
-            foreach (var r in result)
-            {
-                Console.Write(r + " ");
-            }
+            // foreach (var r in result)
+            // {
+            //     Console.Write(r + " ");
+            // }
 
             return result;
         }
@@ -53,10 +54,13 @@ namespace MergeAndQuickSort
             }  
             
             //Recursively sort the left array
+            Console.WriteLine("Recursively sort the left array");
             left = Sort(left);
             //Recursively sort the right array
+            Console.WriteLine("Recursively sort the right array");
             right = Sort(right);
             //Merge our two sorted arrays
+            Console.WriteLine("Merging two sorted arrays");
             result = Merge(left, right);  
             return result;
         }

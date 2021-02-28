@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>MergeAndQuickSort.MergeAndQuickSortBenchmark-20210228-175524</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19041.804 (2004/?/20H1)
+Intel Core i5-7200U CPU 2.50GHz (Kaby Lake), 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=5.0.102
+  [Host]     : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+  DefaultJob : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>             Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>QuickSortWithHundredData</td><td>6.104 &mu;s</td><td>0.2703 &mu;s</td><td>0.7625 &mu;s</td><td>5.860 &mu;s</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>MergeSortWithHundredData</td><td>10.395 &mu;s</td><td>0.5380 &mu;s</td><td>1.5864 &mu;s</td><td>10.010 &mu;s</td><td>2</td><td>13.7939</td><td>-</td><td>-</td><td>21648 B</td>
+</tr><tr><td>MergeSortWith5HundredData</td><td>80.298 &mu;s</td><td>3.3278 &mu;s</td><td>9.8122 &mu;s</td><td>79.077 &mu;s</td><td>3</td><td>76.7822</td><td>-</td><td>-</td><td>120432 B</td>
+</tr><tr><td>QuickSortWith5HundredData</td><td>136.544 &mu;s</td><td>4.2718 &mu;s</td><td>12.3933 &mu;s</td><td>134.496 &mu;s</td><td>4</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>MergeSortWithThousandData</td><td>166.486 &mu;s</td><td>4.5801 &mu;s</td><td>13.3604 &mu;s</td><td>165.830 &mu;s</td><td>5</td><td>161.1328</td><td>-</td><td>-</td><td>252960 B</td>
+</tr><tr><td>QuickSortWithThousandData</td><td>490.958 &mu;s</td><td>12.8048 &mu;s</td><td>37.3523 &mu;s</td><td>483.955 &mu;s</td><td>6</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>

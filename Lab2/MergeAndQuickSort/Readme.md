@@ -82,3 +82,18 @@ If r > l
 1) Difference in worst case θ(nLogn) vs θ(n^2)
 2) Merge sort requires extra space O(n)
 3) Merge sort is best for linked list sorting.
+
+|                    Method |       Mean |      Error |     StdDev |     Median | Rank |    Gen 0 | Gen 1 | Gen 2 | Allocated |
+|-------------------------- |-----------:|-----------:|-----------:|-----------:|-----:|---------:|------:|------:|----------:|
+|  QuickSortWithHundredData |   6.104 μs |  0.2703 μs |  0.7625 μs |   5.860 μs |    1 |        - |     - |     - |         - |
+|  MergeSortWithHundredData |  10.395 μs |  0.5380 μs |  1.5864 μs |  10.010 μs |    2 |  13.7939 |     - |     - |   21648 B |
+| MergeSortWith5HundredData |  80.298 μs |  3.3278 μs |  9.8122 μs |  79.077 μs |    3 |  76.7822 |     - |     - |  120432 B |
+| QuickSortWith5HundredData | 136.544 μs |  4.2718 μs | 12.3933 μs | 134.496 μs |    4 |        - |     - |     - |         - |
+| MergeSortWithThousandData | 166.486 μs |  4.5801 μs | 13.3604 μs | 165.830 μs |    5 | 161.1328 |     - |     - |  252960 B |
+| QuickSortWithThousandData | 490.958 μs | 12.8048 μs | 37.3523 μs | 483.955 μs |    6 |        - |     - |     - |         - |
+
+
+Conclusion:\
+Merge sort requires additional space where as quick sort doesn't.
+The input data there is the better Quick sort performed
+The more input data the better Merge sort performes although it requires more memory space.

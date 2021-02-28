@@ -7,6 +7,8 @@ namespace MergeAndQuickSort
     {
         public static void Execute(int[] data)
         {
+            
+            Console.WriteLine($"Executing Quick sort with {data.Length} data size");
             Sort(data, 0, data.Length - 1);
             // foreach (var d in data)
             // {
@@ -18,11 +20,15 @@ namespace MergeAndQuickSort
         {
             if (low < high)
             {
+                
+                Console.WriteLine($"Figuring out a partition");
                 int pivot = Partition(array, low, high);
                 if (pivot > 1) {
+                    Console.WriteLine($"Recursively sort the left array");
                     Sort(array, low, pivot - 1);
                 }
                 if (pivot + 1 < high) {
+                    Console.WriteLine($"Recursively sort the right array");
                     Sort(array, pivot + 1, high);
                 }
             }
