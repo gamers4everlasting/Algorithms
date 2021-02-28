@@ -1,4 +1,4 @@
-﻿namespace MergeSortVsQuickSort
+﻿namespace MergeAndQuickSort
 {
     public class QuickSortBenchmark
     {

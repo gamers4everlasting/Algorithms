@@ -1,93 +1,113 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MergeAndQuickSort
 {
     public class MergeSort
     {
-        public void Execute(List<int> data)
+        public int[] Execute(int[] data)
         {  
-            Sort(data, 0, data.Count - 1);
+            var result =  Sort(data);
+            foreach (var r in result)
+            {
+                Console.Write(r + " ");
+            }
+
+            return result;
         }
 
         // Main function that
         // sorts arr[l..r] using
         // merge()
-        private void Sort(List<int> data, int l, int r)
+        private int[] Sort(int[] array)
         {
-            if (l < r)
+            int[] left;
+            int[] right;
+            int[] result = new int[array.Length];  
+            //As this is a recursive algorithm, we need to have a base case to 
+            //avoid an infinite recursion and therfore a stackoverflow
+            if (array.Length <= 1)
+                return array;              
+            // The exact midpoint of our array  
+            int midPoint = array.Length / 2;  
+            //Will represent our 'left' array
+            left = new int[midPoint];
+  
+            //if array has an even number of elements, the left and right array will have the same number of 
+            //elements
+            if (array.Length % 2 == 0)
+                right = new int[midPoint];  
+            //if array has an odd number of elements, the right array will have one more element than left
+            else
+                right = new int[midPoint + 1];  
+            //populate left array
+            for (int i = 0; i < midPoint; i++)
+                left[i] = array[i];  
+            //populate right array   
+            int x = 0;
+            //We start our index from the midpoint, as we have already populated the left array from 0 to midpont
+            for (int i = midPoint; i < array.Length; i++)
             {
-                // Find the middle
-                // point
-                var m = l + (r - l) / 2;
-
-                // Sort first and
-                // second halves
-                Sort(data, l, m);
-                Sort(data, m + 1, r);
-
-                // Merge the sorted halves
-                Merge(data, l, m, r);
-            }
+                right[x] = array[i];
+                x++;
+            }  
+            
+            //Recursively sort the left array
+            left = Sort(left);
+            //Recursively sort the right array
+            right = Sort(right);
+            //Merge our two sorted arrays
+            result = Merge(left, right);  
+            return result;
         }
 
         // Merges two subarrays of []arr.
         // First subarray is arr[l..m]
         // Second subarray is arr[m+1..r]
-        private void Merge(List<int> data, int l, int m, int r)
+        private int[] Merge(int[] left, int[] right)
         {
-            // Find sizes of two
-            // subarrays to be merged
-            int n1 = m - l + 1;
-            int n2 = r - m;
- 
-            // Create temp arrays
-            var L = new int[n1];
-            var R = new int[n2];
-            int i, j;
- 
-            // Copy data to temp arrays
-            for (i = 0; i < n1; ++i)
-                L[i] = data[l + i];
-            for (j = 0; j < n2; ++j)
-                R[j] = data[m + 1 + j];
- 
-            // Merge the temp arrays
- 
-            // Initial indexes of first
-            // and second subarrays
-            i = 0;
-            j = 0;
- 
-            // Initial index of merged
-            // subarry array
-            int k = l;
-            while (i < n1 && j < n2) {
-                if (L[i] <= R[j]) {
-                    data[k] = L[i];
-                    i++;
+            int resultLength = right.Length + left.Length;
+            int[] result = new int[resultLength];
+            
+            int indexLeft = 0, indexRight = 0, indexResult = 0;  
+            //while either array still has an element
+            while (indexLeft < left.Length || indexRight < right.Length)
+            {
+                //if both arrays have elements  
+                if (indexLeft < left.Length && indexRight < right.Length)  
+                {  
+                    //If item on left array is less than item on right array, add that item to the result array 
+                    if (left[indexLeft] <= right[indexRight])
+                    {
+                        result[indexResult] = left[indexLeft];
+                        indexLeft++;
+                        indexResult++;
+                    }
+                    // else the item in the right array wll be added to the results array
+                    else
+                    {
+                        result[indexResult] = right[indexRight];
+                        indexRight++;
+                        indexResult++;
+                    }
                 }
-                else {
-                    data[k] = R[j];
-                    j++;
+                //if only the left array still has elements, add all its items to the results array
+                else if (indexLeft < left.Length)
+                {
+                    result[indexResult] = left[indexLeft];
+                    indexLeft++;
+                    indexResult++;
                 }
-                k++;
+                //if only the right array still has elements, add all its items to the results array
+                else if (indexRight < right.Length)
+                {
+                    result[indexResult] = right[indexRight];
+                    indexRight++;
+                    indexResult++;
+                }  
             }
- 
-            // Copy remaining elements
-            // of L[] if any
-            while (i < n1) {
-                data[k] = L[i];
-                i++;
-                k++;
-            }
- 
-            // Copy remaining elements
-            // of R[] if any
-            while (j < n2) {
-                data[k] = R[j];
-                j++;
-                k++;
-            }
+            return result;
+
         }
     }
 }

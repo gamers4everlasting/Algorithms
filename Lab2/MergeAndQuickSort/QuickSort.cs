@@ -1,25 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MergeAndQuickSort
 {
-    public class QuickSort
+    public static class QuickSort
     {
-        public void Execute(List<int> data)
+        public static void Execute(int[] data)
         {
-            Sort(data, 0, data.Count - 1);
+            Sort(data, 0, data.Length - 1);
+            // foreach (var d in data)
+            // {
+            //     Console.Write(d + " ");
+            // }
         }
 
-        private void Sort(IList<int> data, int left, int right)
+        private static void Sort(int[] array, int low, int high)
         {
-            if (left < right)
+            if (low < high)
             {
-                var pivot = Partition(data, left, right);
-                
-                if (pivot > 1) 
-                    Sort(data, left, pivot - 1);
-
-                if (pivot + 1 < right)
-                    Sort(data, pivot + 1, right);
+                int pivot = Partition(array, low, high);
+                if (pivot > 1) {
+                    Sort(array, low, pivot - 1);
+                }
+                if (pivot + 1 < high) {
+                    Sort(array, pivot + 1, high);
+                }
             }
         }
 
@@ -33,28 +38,32 @@ namespace MergeAndQuickSort
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        private int Partition(IList<int> data, int left, int right)
+        private static int Partition(int[] A, int left, int right)
         {
-            var pivot = data[left];
-            while (true)
+            if(left > right) return -1; 
+
+            int end = left; 
+
+            int pivot = A[right];    // choose last one to pivot, easy to code
+            for(int i= left; i< right; i++)
             {
-                while (data[left] < pivot)
-                    left++;
-
-                while (data[right] > pivot) 
-                    right--;
-
-                if (left < right)
+                if (A[i] < pivot)
                 {
-                    var temp = data[right];
-                    data[right] = data[left];
-                    data[left] = temp;
-                }
-                else
-                {
-                    return right;
+                    swap(A, i, end);
+                    end++; 
                 }
             }
+
+            swap(A, end, right);
+
+            return end; 
+        }
+
+        private static void swap(int[] A, int left, int right)
+        {
+            int tmp = A[left];
+            A[left] = A[right];
+            A[right] = tmp; 
         }
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
-using MergeSortVsQuickSort;
 
 namespace MergeAndQuickSort
 {
@@ -11,23 +8,23 @@ namespace MergeAndQuickSort
     [RankColumn]
     public class MergeAndQuickSortBenchmark
     {
-        private readonly QuickSort _quickSort = new QuickSort();
+        private readonly RandomDataGenerator rnd = new RandomDataGenerator();
         private readonly MergeSort _mergeSort = new MergeSort();
-        private readonly List<int> _hundredData;
-        private readonly List<int> _fiveHundredData;
-        private List<int> _thousandData;
+        private readonly int[] _hundredData;
+        private readonly int[] _fiveHundredData;
+        private readonly int[] _thousandData;
         
-        public MergeAndQuickSortBenchmark(RandomDataGenerator randomDataGenerator)
+        public MergeAndQuickSortBenchmark()
         {
-            _hundredData = randomDataGenerator.FillWithRandomData(100);
-            _fiveHundredData = randomDataGenerator.FillWithRandomData(500);
-            _thousandData = randomDataGenerator.FillWithRandomData(1000);
+            _hundredData = rnd.FillWithRandomData(100);
+            _fiveHundredData = rnd.FillWithRandomData(500);
+            _thousandData = rnd.FillWithRandomData(1000);
         }
         
         [Benchmark]
         public void QuickSortWithHundredData()
         {
-            _quickSort.Execute(_hundredData);
+            QuickSort.Execute(_hundredData);
         }
         
         [Benchmark]
@@ -38,13 +35,24 @@ namespace MergeAndQuickSort
         [Benchmark]
         public void QuickSortWith5HundredData()
         {
-            _quickSort.Execute(_fiveHundredData);
+            QuickSort.Execute(_fiveHundredData);
         }
         
         [Benchmark]
         public void MergeSortWith5HundredData()
         {
             _mergeSort.Execute(_fiveHundredData);
+        }
+        [Benchmark]
+        public void QuickSortWithThousandData()
+        {
+            QuickSort.Execute(_thousandData);
+        }
+        
+        [Benchmark]
+        public void MergeSortWithThousandData()
+        {
+            _mergeSort.Execute(_thousandData);
         }
     }
 }

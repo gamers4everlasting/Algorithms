@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MergeSortVsQuickSort
+namespace MergeAndQuickSort
 {
     public class RandomDataGenerator
     {
-        public List<int> FillWithRandomData(int dataLength)
+        public RandomDataGenerator()
+        {
+            
+        }
+        public int[] FillWithRandomData(int dataLength)
         {
             var rnd = new Random();
-            var localSize = dataLength;
-            var rndList = new List<int>(dataLength);
-            while (localSize > 0)
+            var localSize = 0;
+            var rndList = new int[dataLength];
+            while (localSize < dataLength)
             {
-                rndList.Add(rnd.Next(0, dataLength));
-                localSize--;
+                rndList[localSize] = rnd.Next(0, dataLength);
+                localSize++;
             }
 
             return rndList;
