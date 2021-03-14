@@ -1,0 +1,16 @@
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.csprojAssemblyReference.cache
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.AssemblyInfoInputs.cache
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.AssemblyInfo.cs
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\bin\Debug\net5.0\GreedyAlgorithm.exe
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\bin\Debug\net5.0\GreedyAlgorithm.deps.json
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\bin\Debug\net5.0\GreedyAlgorithm.runtimeconfig.json
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\bin\Debug\net5.0\GreedyAlgorithm.runtimeconfig.dev.json
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\bin\Debug\net5.0\GreedyAlgorithm.dll
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\bin\Debug\net5.0\ref\GreedyAlgorithm.dll
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\bin\Debug\net5.0\GreedyAlgorithm.pdb
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.dll
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\ref\GreedyAlgorithm.dll
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.pdb
+C:\Users\OlenPC\Desktop\Auca\Algorith Languages\Lab3\GreedyAlgorithm\GreedyAlgorithm\obj\Debug\net5.0\GreedyAlgorithm.genruntimeconfig.cache
