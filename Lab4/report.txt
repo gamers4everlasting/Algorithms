@@ -1,0 +1,187 @@
+1)What is the main advantage of this sort?
+The advantage the this sort is in the les operations when the data is sorted/reverse sorted in comparison to mergesort
+it also uses less memmory.
+Basically the main advantage is in reducement of swap space and time.
+2)How is the program measuring the running time?
+Interestingly that at 10000000 values the algorythm is unstable and random order the Average time of quick sort is a bit better.
+The comparisons are totaly strange it went to minus.
+In descending and ascending sorted data quad sort is half the time faster that quick sort.
+3)What about the space issues?
+According to authors conclusion, the memmory for wapping data is much less that it is in merge sort,
+since algorithm makes less operations when the data is sorted or reverse sorted, while the average memmory use is same as in merge sort.
+
+4)Can you increase to more than 4 (quads)?
+Theoretically it is possible to increse the quads, which increases the programming logic.
+Which may lead to a larger memmory use (logicly may exceed the L1 cache level which leads to slow program execution)
+
+
+
+Benchmark: array size: 100000, samples: 10, repetitions: 1, seed: 1616000537
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort |   100000 |  128 | 0.030856 | 0.031393 |   1536471 |      10 |     random order |
+|  quadsort |   100000 |  128 | 0.026553 | 0.026717 |   1601103 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort |   100000 |   64 | 0.013609 | 0.013819 |   1536357 |      10 |     random order |
+|  quadsort |   100000 |   64 | 0.014628 | 0.014823 |   1600794 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort |   100000 |   32 | 0.012694 | 0.013121 |   1536252 |      10 |     random order |
+|  quadsort |   100000 |   32 | 0.013680 | 0.013947 |   1600769 |      10 |     random order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.002815 | 0.002925 |    815024 |      10 |  ascending order |
+|  quadsort |   100000 |   32 | 0.000477 | 0.000487 |     99999 |      10 |  ascending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.004100 | 0.004214 |    915019 |      10 |    ascending saw |
+|  quadsort |   100000 |   32 | 0.002892 | 0.003022 |    458704 |      10 |    ascending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.009114 | 0.009262 |   1532311 |      10 |    generic order |
+|  quadsort |   100000 |   32 | 0.010418 | 0.010600 |   1596102 |      10 |    generic order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.003258 | 0.003308 |    853904 |      10 | descending order |
+|  quadsort |   100000 |   32 | 0.000478 | 0.000513 |     99999 |      10 | descending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.004549 | 0.004693 |    953899 |      10 |   descending saw |
+|  quadsort |   100000 |   32 | 0.002958 | 0.003064 |    470636 |      10 |   descending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.005360 | 0.005542 |   1011788 |      10 |      random tail |
+|  quadsort |   100000 |   32 | 0.004161 | 0.004258 |    575948 |      10 |      random tail |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.008022 | 0.008194 |   1200563 |      10 |      random half |
+|  quadsort |   100000 |   32 | 0.007658 | 0.007835 |    967074 |      10 |      random half |
+|           |          |      |          |          |           |         |                  |
+|     qsort |   100000 |   32 | 0.005822 | 0.005956 |   1209200 |      10 |  ascending tiles |
+|  quadsort |   100000 |   32 | 0.006636 | 0.006793 |   1208186 |      10 |  ascending tiles |
+
+Benchmark: array size: 1000000, samples: 10, repetitions: 1, seed: 1616000764
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort |  1000000 |  128 | 0.383098 | 0.385844 |  18673722 |      10 |     random order |
+|  quadsort |  1000000 |  128 | 0.325029 | 0.326534 |  19059147 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort |  1000000 |   64 | 0.167538 | 0.168592 |  18674279 |      10 |     random order |
+|  quadsort |  1000000 |   64 | 0.179649 | 0.180618 |  19058562 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort |  1000000 |   32 | 0.152015 | 0.153233 |  18674586 |      10 |     random order |
+|  quadsort |  1000000 |   32 | 0.166217 | 0.167471 |  19060231 |      10 |     random order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.033701 | 0.034377 |   9884992 |      10 |  ascending order |
+|  quadsort |  1000000 |   32 | 0.004154 | 0.004432 |    999999 |      10 |  ascending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.046439 | 0.056514 |  10884983 |      10 |    ascending saw |
+|  quadsort |  1000000 |   32 | 0.031504 | 0.036112 |   4279218 |      10 |    ascending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.100960 | 0.103382 |  18618512 |      10 |    generic order |
+|  quadsort |  1000000 |   32 | 0.116332 | 0.117033 |  18996529 |      10 |    generic order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.038435 | 0.039069 |  10066432 |      10 | descending order |
+|  quadsort |  1000000 |   32 | 0.004035 | 0.004374 |    999999 |      10 | descending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.050420 | 0.053452 |  11066451 |      10 |   descending saw |
+|  quadsort |  1000000 |   32 | 0.043615 | 0.044949 |   7135468 |      10 |   descending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.064321 | 0.065076 |  12249388 |      10 |      random tail |
+|  quadsort |  1000000 |   32 | 0.049604 | 0.051050 |   6799535 |      10 |      random tail |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.097850 | 0.100772 |  14529551 |      10 |      random half |
+|  quadsort |  1000000 |   32 | 0.092890 | 0.093704 |  11357787 |      10 |      random half |
+|           |          |      |          |          |           |         |                  |
+|     qsort |  1000000 |   32 | 0.069905 | 0.072147 |  14656048 |      10 |  ascending tiles |
+|  quadsort |  1000000 |   32 | 0.078764 | 0.081496 |  14474456 |      10 |  ascending tiles |
+
+Benchmark: array size: 10000000, samples: 10, repetitions: 1, seed: 1616000899
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort | 10000000 |  128 | 4.618755 | 4.625477 | 220101175 |      10 |     random order |
+|  quadsort | 10000000 |  128 | 3.849999 | 3.952905 | 227432191 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort | 10000000 |   64 | 2.096335 | 2.099895 | 220098765 |      10 |     random order |
+|  quadsort | 10000000 |   64 | 2.197800 | 2.208888 | 227437395 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort | 10000000 |   32 | 1.886217 | 1.894377 | 220105931 |      10 |     random order |
+|  quadsort | 10000000 |   32 | 1.946245 | 1.981062 | 227439448 |      10 |     random order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 0.397789 | 0.413226 | 114434624 |      10 |  ascending order |
+|  quadsort | 10000000 |   32 | 0.045384 | 0.045987 |   9999999 |      10 |  ascending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 0.539785 | 0.563273 | 124434618 |      10 |    ascending saw |
+|  quadsort | 10000000 |   32 | 0.284234 | 0.293300 |  44349698 |      10 |    ascending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 1.153744 | 1.194522 | 219362195 |      10 |    generic order |
+|  quadsort | 10000000 |   32 | 1.332358 | 1.362296 | 226580925 |      10 |    generic order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 0.493817 | 0.507161 | 118788160 |      10 | descending order |
+|  quadsort | 10000000 |   32 | 0.040935 | 0.041178 |   9999999 |      10 | descending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 0.615806 | 0.634504 | 128790552 |      10 |   descending saw |
+|  quadsort | 10000000 |   32 | 0.640057 | 0.673186 | 109642985 |      10 |   descending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 0.785801 | 0.809969 | 142519500 |      10 |      random tail |
+|  quadsort | 10000000 |   32 | 0.576510 | 0.599161 |  81218882 |      10 |      random tail |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 1.159712 | 1.194749 | 169770905 |      10 |      random half |
+|  quadsort | 10000000 |   32 | 1.059868 | 1.094343 | 129508590 |      10 |      random half |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 10000000 |   32 | 0.844574 | 0.917059 | 170925824 |      10 |  ascending tiles |
+|  quadsort | 10000000 |   32 | 0.938262 | 0.964240 | 170958096 |      10 |  ascending tiles |
+
+Benchmark: array size: 100000000, samples: 10, repetitions: 1, seed: 1616001270
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort | 100000000 |  128 | 55.600683 | 57.875886 | -1762040956 |      10 |     random order |
+|  quadsort | 100000000 |  128 | 45.590805 | 47.004538 | -1720449973 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort | 100000000 |   64 | 24.793150 | 25.201138 | -1762054708 |      10 |     random order |
+|  quadsort | 100000000 |   64 | 26.191859 | 26.719672 | -1720471392 |      10 |     random order |
+
+|      Name |    Items | Type |     Best |  Average |  Compares | Samples |     Distribution |
+| --------- | -------- | ---- | -------- | -------- | --------- | ------- | ---------------- |
+|     qsort | 100000000 |   32 | 22.269181 | 22.945330 | -1762020699 |      10 |     random order |
+|  quadsort | 100000000 |   32 | 23.714441 | 24.264411 | -1720444862 |      10 |     random order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 4.901589 | 5.120491 | 1314447104 |      10 |  ascending order |
+|  quadsort | 100000000 |   32 | 0.468324 | 0.480045 |  99999999 |      10 |  ascending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 6.490488 | 6.851496 | 1414447100 |      10 |    ascending saw |
+|  quadsort | 100000000 |   32 | 3.038690 | 3.176859 | 414336766 |      10 |    ascending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 13.391308 | 13.783448 | -1771047755 |      10 |    generic order |
+|  quadsort | 100000000 |   32 | 15.627615 | 16.312521 | -1730340118 |      10 |    generic order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 6.195433 | 6.658383 | 1351335168 |      10 | descending order |
+|  quadsort | 100000000 |   32 | 0.444725 | 0.452868 |  99999999 |      10 | descending order |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 7.460190 | 7.655606 | 1451529076 |      10 |   descending saw |
+|  quadsort | 100000000 |   32 | 9.117745 | 9.376432 | 1412537659 |      10 |   descending saw |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 9.968401 | 10.185770 | 1635738832 |      10 |      random tail |
+|  quadsort | 100000000 |   32 | 6.765730 | 6.955842 | 800216292 |      10 |      random tail |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 14.354846 | 14.608466 | 1948696076 |      10 |      random half |
+|  quadsort | 100000000 |   32 | 12.890638 | 13.336844 | 1453611306 |      10 |      random half |
+|           |          |      |          |          |           |         |                  |
+|     qsort | 100000000 |   32 | 10.206889 | 10.387482 | 1931976016 |      10 |         unstable |
+|  quadsort | 100000000 |   32 | 11.410679 | 11.606110 | 1911017050 |      10 |         unstable |
+
+
+
+
+
+
